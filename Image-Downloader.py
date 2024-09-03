@@ -10,7 +10,7 @@ inp_frame = tk.Frame(window)
 inp_frame.pack()
 
 f_text = tk.Label(inp_frame, text="Input File :", font=("Comic Sans MS",15))
-f_text.grid(row=0, column=0)
+f_text.grid(row=0, column=0, sticky="E", padx=10, pady=10)
 
 f1 = tk.StringVar()
 f_ent = tk.Entry(inp_frame, textvariable=f1, font=("Comic Sans MS",13))
@@ -20,7 +20,7 @@ f_btn = tk.Button(inp_frame, text="Browse", font=("Comic Sans MS",15))
 f_btn.grid(row=0, column=2)
 
 fold_text = tk.Label(inp_frame, text="Output Folder :", font=("Comic Sans MS",15))
-fold_text.grid(row=1, column=0)
+fold_text.grid(row=1, column=0, sticky="E", padx=10, pady=10)
 
 f2 = tk.StringVar()
 fold_ent = tk.Entry(inp_frame, textvariable=f2, font=("Comic Sans MS",13))
