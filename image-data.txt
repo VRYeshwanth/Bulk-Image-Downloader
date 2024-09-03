@@ -1,2 +1,6 @@
 https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200622222131/What-is-Web-Scraping-and-How-to-Use-It.png|Web Scraping Image-1
 https://files.realpython.com/media/17_6_tk_exercise2_win10.43ba39ae6134.jpg|GUI-1
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP9aZJSgDr8iojBVnmv2a1tVn5MDAvBlOLMQ&s|Acrolein
+https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Olympicene.svg/800px-Olympicene.svg.png|Olympicene
+https://upload.wikimedia.org/wikipedia/commons/8/85/Barrelene_structure.png|bicyclo[2.2.2]octa-2,5,7-triene
+https://upload.wikimedia.org/wikipedia/commons/6/6e/BARF.png|Tetrakis(3,5-bis(trifluoromethyl)phenyl)borate
