@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog
+import requests
 
 window = tk.Tk()
 window.title('Bulk Image Downloader')
@@ -13,6 +14,32 @@ def browse_folder():
     folder = filedialog.askdirectory()
     if folder:
         f2.set(folder)
+
+def download_images():
+    file_path = f1.get()
+    folder_path = f2.get()
+    url_list, names_list = [], []
+
+    with open(file_path, "r") as f:
+        lines  = f.readlines()
+        for line in lines:
+            url,name = line.split("|")
+            url_list.append(url)
+            names_list.append(name.strip())
+    
+    count = 0
+    
+    for i,link in enumerate(url_list):
+        try:
+            page = requests.get(link).content
+
+            with open(f"{folder_path}/{names_list[i]}.jpg", "wb+") as f:
+                f.write(page)
+            
+            count += 1
+        except Exception as e:
+            continue
+
 
 heading = tk.Label(window, text="Bulk Image Downloader", font=("Comic Sans MS",20,"bold"))
 heading.pack(padx=20, pady=15)
@@ -40,7 +67,7 @@ fold_ent.grid(row=1, column=1, padx=(10,20),  pady=10)
 fold_btn = tk.Button(inp_frame, text="Browse", font=("Comic Sans MS",15), command=browse_folder)
 fold_btn.grid(row=1,column=2, padx=(0,20), pady=10, ipadx=5)
 
-download_btn = tk.Button(inp_frame, text="Download", font=("Comic Sans MS",15))
+download_btn = tk.Button(inp_frame, text="Download", font=("Comic Sans MS",15), command=download_images)
 download_btn.grid(row=2, columnspan=3, pady=(10,20))
 
 window.mainloop()
