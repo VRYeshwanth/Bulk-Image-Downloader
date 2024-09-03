@@ -1,7 +1,18 @@
 import tkinter as tk
+from tkinter import filedialog
 
 window = tk.Tk()
 window.title('Bulk Image Downloader')
+
+def browse_file():
+    file = filedialog.askopenfilename()
+    if file:
+        f1.set(file)
+
+def browse_folder():
+    folder = filedialog.askdirectory()
+    if folder:
+        f2.set(folder)
 
 heading = tk.Label(window, text="Bulk Image Downloader")
 heading.pack()
