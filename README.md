@@ -3,7 +3,7 @@
 This GUI allows you to download multiple images at the same time. It works by downloading the images provided by the user in the form of a text file.
 
 The user has to provide a text file to the GUI having the following format:-<br>
-<b><h2>{image-url}|{name of the image}</h2></b>
+<b><h4>{image-url}|{name of the image}</h4></b>
 
 Ex:-<br>
 https://www.fertilome.com/media/klowrey/Article%20Images/Tree.jpg|Tree1<br>
